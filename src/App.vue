@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="code-area">
-      <button class="format" @click="handleFormat">格式化</button>
+      <div class="format" @click="handleFormat">格式化</div>
       <codemirror
         :value="codeValue"
         :options="cmOptions"
@@ -112,12 +112,18 @@ body {
 }
 .format {
   position: absolute;
-  width: 60px;
-  height: 20px;
+  width: 80px;
+  height: 30px;
   border-radius: 5px;
-  text-align: center;
   top: 10px;
   right: 10px;
   z-index: 10;
+  background-color: #666;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
 }
 </style>
